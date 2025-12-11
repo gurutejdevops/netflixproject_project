@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_gurutejdevops_netflixproject_project_1765487580837-push-trigger-input-set
+  identifier: Build_gurutejdevops_netflixproject_project_1765487580837pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: JavaCIProject
+  pipeline:
+    identifier: Build_gurutejdevops_netflixproject_project_1765487580837
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
