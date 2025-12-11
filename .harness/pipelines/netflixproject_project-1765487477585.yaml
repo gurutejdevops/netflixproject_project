@@ -5,11 +5,11 @@ pipeline:
   orgIdentifier: default
   stages:
     - stage:
-        name: Build
+        name: Build Stage
         identifier: Build
         type: CI
         spec:
-          cloneCodebase: true
+          cloneCodebase: false
           execution:
             steps:
               - step:
@@ -18,16 +18,19 @@ pipeline:
                   identifier: Echo_Welcome_Message
                   spec:
                     shell: Sh
-                    command: echo "Welcome to Harness CI"
+                    command: |-
+                      docker ps
+                      docker version
+                      docker images
           platform:
             os: Linux
             arch: Amd64
           runtime:
-            type: Cloud
+            type: Docker
             spec: {}
-  properties:
-    ci:
-      codebase:
-        connectorRef: account.Github_OAuth_1765487292951
-        repoName: gurutejdevops/netflixproject_project
-        build: <+input>
+          caching:
+            enabled: false
+            paths: []
+          buildIntelligence:
+            enabled: false
+        description: ""
