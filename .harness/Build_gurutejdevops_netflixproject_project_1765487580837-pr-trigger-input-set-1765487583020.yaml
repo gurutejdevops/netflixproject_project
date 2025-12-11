@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_gurutejdevops_netflixproject_project_1765487580837-pr-trigger-input-set
+  identifier: Build_gurutejdevops_netflixproject_project_1765487580837prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: JavaCIProject
+  pipeline:
+    identifier: Build_gurutejdevops_netflixproject_project_1765487580837
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
